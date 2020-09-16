@@ -24,4 +24,4 @@ while True:
   print( f"chandrateja|{new_name}")
   print("waiting to refresh")
   time.sleep(60)
-     
+       
