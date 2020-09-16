@@ -11,8 +11,9 @@ def authentication():
   api.verify_credentials()
   print("api created")
   return api
- 
- def new_name(user):
+
+def new_name(user):
+  print("emoji")
   emoji_dict={0:"0️⃣",1:"1️⃣",2:"2️⃣",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9"}
   emoji_list ="".join([emoji_dict[int(i)] for i in str(user.followers_count) if int(i) in emoji_dict.keys()])
   return emoji_list
