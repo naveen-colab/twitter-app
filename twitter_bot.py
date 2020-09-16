@@ -23,8 +23,9 @@ api = authentication()
 print("started to run")
 while True:
   user = api.get_user("@Chandra34570619")
-  api .update_profile(name = f"itsmenaveen|{new_name(user)} followers")
-  print( f"itsmenaveen|{new_name} followers")
+  print("it crossed user object")
+  api.update_profile(name = f"itsmenaveen|{new_name(user)} followers")
+  print(f"itsmenaveen|{new_name} followers")
   print("waiting to refresh")
   time.sleep(60)
        
