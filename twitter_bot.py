@@ -20,15 +20,20 @@ def new_name(user):
   emoji_list ="".join([emoji_dict[int(i)] for i in str(user.followers_count) if int(i) in emoji_dict.keys()])
   return emoji_list
 
-api = authentication()
-print("started to run")
-while True:
-  user = api.get_user("@Chandra34570619")
-  print("it crossed user object")
-  api.update_profile(name = f"itsmenaveen|{new_name(user)} followers")
-  print(f"itsmenaveen|{new_name} followers")
+def change_the_id(user):
+  api .update_profile(name = f"itsmenaveen|{new_name(user)}")
+  print( f"chandrateja|{new_name(user)}")
+  prev_count_of_followers = user.followers_count
   print("waiting to refresh")
   time.sleep(60)
+  
+api = authentication()
+user = api.get_user("@Chandra34570619")
+prev_count_of_followers = user.followers_count
+while True:
+  if prev_count_of_followers != user.followers_count:
+    print("changed",user)
+    change_the_id(user)
        
  
  
