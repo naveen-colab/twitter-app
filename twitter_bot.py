@@ -15,7 +15,6 @@ def authentication():
   return api
 
 def new_name(user):
-  print("emoji")
   emoji_dict={0:"0️⃣",1:"1️⃣",2:"2️⃣"}
   emoji_list ="".join([emoji_dict[int(i)] for i in str(user.followers_count) if int(i) in emoji_dict.keys()])
   return emoji_list
