@@ -29,11 +29,13 @@ def change_the_id(user):
   
 api = authentication()
 user = api.get_user("@Chandra34570619")
-prev_count_of_followers = user.followers_count
+"""prev_count_of_followers = user.followers_count
+print(prev_count_of_followers," " ,user.followers_count)
 while True:
+  print(prev_count_of_followers," " ,user.followers_count)
   if prev_count_of_followers != user.followers_count:
           print("changed")
-          change_the_id(user)
+          change_the_id(user)"""
        
  
  
