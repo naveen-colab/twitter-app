@@ -17,11 +17,18 @@ def authentication():
   emoji_list ="".join([emoji_dict[int(i)] for i in str(user.followers_count) if int(i) in emoji_dict.keys()])
   return emoji_list
 
-api = authentication()
-while True:
-  user = api.get_user("@Chandra34570619")
+
+def change_the_id():
   api .update_profile(name = f"itsmenaveen|{new_name(user)}")
-  print( f"chandrateja|{new_name}")
+  print( f"chandrateja|{new_name(user)}")
   print("waiting to refresh")
   time.sleep(60)
+  
+api = authentication()
+user = api.get_user("@Chandra34570619")
+prev_count_of_followers = user.followers_count
+while True:
+  if prev_count_of_followers != user.followers_count:
+    print("changed",user)
+    change_the_id(user)
      
