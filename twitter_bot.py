@@ -32,8 +32,8 @@ user = api.get_user("@Chandra34570619")
 prev_count_of_followers = user.followers_count
 while True:
   if prev_count_of_followers != user.followers_count:
-    print("changed",user)
-    change_the_id(user)
+          print("changed")
+          change_the_id(user)
        
  
  
