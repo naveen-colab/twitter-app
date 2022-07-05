@@ -1,2 +1,2 @@
 # twitter_googlecolab
-it changes the twitter name.
+A program to change the name of Twitter handle using Twitter developer account.
